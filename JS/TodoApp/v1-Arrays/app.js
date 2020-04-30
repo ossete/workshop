@@ -11,7 +11,12 @@ let todoList = [
   "Sell them more expensive",
   "Repeat first 3 item"
 ];
+console.log("List in the beginning", todoList);
 
 // ADD AN ELEMENT TO THE ARRAY
 todoList.push("Be rich");
-console.log(todoList);
+console.log("List after push", todoList);
+
+//DELETE FROM ARRAY
+todoList.splice (1,1);
+console.log("List after splice", todoList);

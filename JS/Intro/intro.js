@@ -75,7 +75,7 @@ let str2 = 'I\'m 18 years of age'; //escape character
 // In JS we concatenate with + sign
 let str3 = "I'm " + 35; 
 
-let person = "Bob";
+// let person = "Bob";
 let age = "32";
 let phrase = name + " is " + age + " years old."; //Bob is 32 years old.
 
@@ -97,6 +97,11 @@ let calculate = 8 + 2; //console.log(calculate);
 let calc2     = 2 + 3 * 10; //32
 let calc3     = (2 + 3) * 10; //50
 let calc4     = -2 + (-2); //console.log(calc4);
+
+//Modulo operator //shows the reminder from a division process
+let reminder; //declare the variable with undefined value;
+// reminder = 110 % 60; console.log (reminder);
+// reminder = 10 % 3 // 1
 
 // NATIVE NUMBER METHODS
 let rand      = Math.random() * 10; //console.log(rand);
@@ -128,26 +133,116 @@ arr2.push("Bob");  //console.log(arr2);
 //arr2.splice(1, 2);  console.log(arr2); //deletes "2" items starting from "1." (order commence with 0) character
 
 //Change a value inside an array
-arr2[0] = "Rachel"; //console.log(arr2)
+// arr2[0] = "Rachel"; //console.log(arr2)
+
+//Using splice method to modify an array
+arr2.splice(2, 0, "Freddy"); //zero means don't delete an item. and then 3rd input adds Fredy
+console.log (arr2);
 
 
-/* FUNCTIONS permets us modular programming
-------------------------------------------------*/
-// when we see the parenthesis they should remind us function.
-function calculateAge (name, birthYear) {
-// these spaces makes easier to read a function 
-  // let name = "Mutlu";
 
-  let date = new Date();
-  let currentYear = date.getFullYear(); //console.log(currentYear);
-  let age = currentYear - birthYear;
-// these spaces makes easier to read a function
-  return name + " is " + age + " years old." ; //Akif is 32 years old. 
+// /* FUNCTIONS permets us modular programming
+// ------------------------------------------------*/
+// // function example 1 !!! UPDATE THIS CODE from the video or github: EXEMPLE 1
+// // when we see the parenthesis they should remind us function.
+// function calculateAge (name, birthYear) {  //argument or parameter = name, birthYear.
+// // these spaces makes easier to read a function 
+//   // let name = "Mutlu";
 
-  //Nothing will be displayed after the first return
-  let bob = 56;
-  return bob;
+//   let date = new Date();
+//   let currentYear = date.getFullYear(); //console.log(currentYear);
+//   let age = currentYear - birthYear;
+// // these spaces makes easier to read a function
+//   return name + " is " + age + " years old." ; //Akif is 32 years old. //return is an output and like an EXIT. EXIT here !
+
+//   //Nothing will be displayed after the first return
+//   let bob = 56;
+//   return bob;
+// }
+// console.log ( calculateAge("Bob", 1988) ); //function calling dont use ";"
+// console.log ( calculateAge("Josh", 1978) );
+// console.log ( calculateAge("Jennifer", 1968) );
+
+
+// // function example 2
+// // Return day of the week based on a number
+// function dayOfTheWeek(index) { //index is a PLACEHOLDER
+
+//   let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+
+//   return days[index]
+// }
+
+// dayOfTheWeek(index);
+
+// function sayHello(greeting, input) {
+
+
+//   let display = greeting + input + " !";
+//   return display;
+// }
+
+//   console.log ( sayHello("Bonjour ", "Bob") );
+// ---------
+// function sayHello(greeting, input) {
+
+
+//   let display = greeting + input + " !";
+//   console.log(display);
+// }
+// sayHello ("Bonjour ", "Bob");
+
+// // Convert minutes into seconds
+// function minToSec (input) {
+//   let sec = input * 60 + " " + "seconds";
+//   console.log(sec);
+// }
+// minToSec (5);
+// minToSec (60);
+// minToSec (24*60*60);
+
+// let userInput = prompt("Number of minutes");
+// minToSec (userInput);
+
+//BONUS add from Github - using prompt as an argument
+
+/* OBJECTS
+------------------------------------------------ */
+// Name, gender, age, country
+let person = {
+
+  name: "Bob Geldof", //eachone of this items are "key"
+  gender: "man",
+  age: 68,
+  country: "UK" 
+
 }
-console.log ( calculateAge("Bob", 1988) ); //function calling dont use ";"
-console.log ( calculateAge("Josh", 1978) );
-console.log ( calculateAge("Jennifer", 1968) );
+
+// console.log(person);
+// console.log( person["name"] );
+// console.log( person.name ); //dot notation
+
+let persons = {
+
+  bob: {
+    name: "Bob Geldof", //eachone of this items are "key". In a json file all the keys have to be in quotation marks. "keyName"
+    gender: "man",
+    age: 68,
+    country: "UK"   
+  },
+  marco: {
+    name: "Marco van Basten", //eachone of this items are "key"
+    gender: "man",
+    age: 45,
+    country: "NL"   
+  },
+  nadia: {
+    name: "Nadia Comaneci", //eachone of this items are "key"
+    gender: "female",
+    age: 45,
+    country: "Romania"
+  }
+}
+
+console.log(persons.marco.name);
