@@ -31,6 +31,38 @@ function surfaceCalcNet2(width, length) {
 }
 // console.log(surfaceCalcNet2(10, 5.11));
 
+// Frames Per Second
+// Create a function that returns the number of frames shown in a given number of minutes for a certain FPS.
+
+function numberOfFrames (input, fps = 60) {
+  let totalFps = input * fps * 60;
+  return totalFps;
+}
+console.log(numberOfFrames(10));
+
+// Calculate the Profit
+// You work for a manufacturer, and have been asked to calculate the total profit made on the sales of a product. You are given an object containing the cost price per unit (in dollars), sell price per unit (in dollars), and the starting inventory. Return the total profit made, rounded to the nearest dollar. Assume all of the inventory has been sold
+
+function profit(buy, sell, quantity) {
+  let profit = (sell - buy) * quantity;
+  return profit;
+}
+console.log(profit(5,10,100));
+
+objectName = {
+  buy: 4,
+  sell: 10,
+  quantity: 10
+}
+
+function profit2(objectName) {
+
+  let profit2 = (objectName.sell - objectName.buy) * objectName.quantity;
+  return (profit2);
+}
+console.log(profit2(objectName));
+
+
 // Extract City Facts exercice
 
 /* function cityFacts(city) {
