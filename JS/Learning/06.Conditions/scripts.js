@@ -15,37 +15,37 @@ let num2 = 20;
 
 //A SIMPLE CONDITION
 if(num > 5) {
-  console.log("Simple check:", "TRUE!");
+  // console.log("Simple check:", "TRUE!");
 }
 else {
-  console.log("Simple check:", "FALSE!");
+  // console.log("Simple check:", "FALSE!");
 }
 
 //A STRICT EQUALITY CHECK CONDITION
 if(num === 5) {
-  console.log("Strict equality:", "TRUE!");
+  // console.log("Strict equality:", "TRUE!");
 }
 else {
-  console.log("Strict equality:", "FALSE!");
+  // console.log("Strict equality:", "FALSE!");
 }
 
 
 //A DOUBLE CKECK WITH "OR" (logical operator)
 //One of the conditions must be true
-if(num > 5 || num2 < 30) {
-  console.log("Double check with OR:", "TRUE");
+if(num > 5 || num2 < 30 ) {
+  // console.log("Double check with OR:", "TRUE");
 }
 
 //A DOUBLE CKECK WITH "AND" (logical operator)
 //Both conditions must be true
 if(num > 5 && num2 < 30) {
-  console.log("Double check with AND:", "TRUE");
+  // console.log("Double check with AND:", "TRUE");
 }
 
 
 //USING NOT OPERATOR
 if(num != "5") {
-  console.log("not operator: TRUE!");
+  // console.log("not operator: TRUE!");
 }
 
 //COMPLEX CHECKS
@@ -98,7 +98,7 @@ function message(customHour = null) {
 
 
   //4. OUTPUT
-  console.log("Hour message:", output);
+  // console.log("Hour message:", output);
 
 
 }
@@ -109,3 +109,94 @@ message(9); //with an argument, function will use this value
 // message(15);
 // message(18);
 // message(21);
+
+
+/* ELSE IF STATEMENT
+---------------------------------------- */
+
+let numb = 15;
+// let output = "";
+
+// We start with an if statement
+if (numb > 15) {
+  output = "FALSE 1";
+}
+else if (numb >= 15) {
+  output = "TRUE 1";
+}
+else if (numb === "15") {
+  output = "FALSE 2";
+}
+else if (numb === 15) {
+  output = "TRUE 2";
+}
+else {
+  output = "NOTHING IS TRUE MATE";
+}
+// console.log(output);
+
+//  I HAVE A QUESTION ?
+// "let output" has to be inside the function ?
+// do we have to use "return" ?
+// make an exemple. use a globale scope variable inside a function
+
+
+function message(hour = null) {
+  
+  let output = "";
+  if(hour < 8) {
+    output = "What are you doing that early?";
+  }
+  else if(hour >= 8 && hour < 12) {
+    output = "Good morning!";
+  }
+  else if(hour >= 12 && hour < 17) {
+    output = "Good afternoon!";
+  }
+  else if(hour >= 17 && hour < 21) {
+    output = "Good evening!";
+  }
+  else if(hour >= 21 && hour <= 24) {
+    output = "Good night!";
+  }
+  else {
+    output = "Not sure what hour you typed :/"
+  }
+  // console.log(output);
+};
+// message(11);
+
+/* THE SWITCH STATEMENT
+------------------------------------- */
+let day = new Date().getDay(); show(day);
+switch(day) {
+
+  case 0 :
+    output = "Sunday";
+  break;
+
+  case 1 :
+    output = "Monday";
+  break;
+
+  case 2 :
+    output = "Tuesday";
+  break;
+
+  case 3 :
+    output = "Wednesday";
+  break;
+
+  case 4 :
+    output = "Thursday";
+  break;
+
+  case 5 :
+    output = "Friday";
+  break;
+
+  case 6 :
+    output = "Saturday";
+  break;
+
+}
